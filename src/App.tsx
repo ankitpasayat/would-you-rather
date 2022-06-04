@@ -1,6 +1,16 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 import React from 'react';
-import logo from './logo.svg';
+import tw from 'twin.macro';
 import './App.css';
+import logo from './logo.svg';
+
+const titleStyle = css`
+  boxSizing: 'border-box';
+  width: 300;
+  height: 200;
+  ${tw`text-black bg-blue-300`};
+  `
 
 function App() {
   return (
@@ -9,6 +19,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <p css={titleStyle}>
+          Pog
         </p>
         <a
           className="App-link"
